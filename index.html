@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ōra studios | Heated Mat &amp; Reformer Pilates coming to Port St. Lucie</title>
+<meta name="description" content="ōra studios is a heated mat and reformer Pilates studio opening fall 2026 in Gatlin Square, Port St. Lucie, Florida. Join the founding list for early access and founding member pricing.">
+
+<!-- ============================================================
+     FONTS — paste your Adobe Fonts web project <link> below.
+     Until then the stack falls back to the closest system faces.
+     ============================================================ -->
+<!-- <link rel="stylesheet" href="https://use.typekit.net/XXXXXXX.css"> -->
+
+<style>
+:root{
+  --burgundy:#8D1914;
+  --rootbeer:#260D08;
+  --wistful:#FBE2A9;
+  --copper:#E27D44;
+  --ballet:#EDE7DA;      /* digital match to Ballet White OC-9 */
+  --ballet-hi:#F5F1E8;
+
+  --rule:rgba(38,13,8,.22);
+  --rule-light:rgba(237,231,218,.24);
+
+  --display:"eurostile-extended","Eurostile Extended","Eurostile Extd",
+            "Bahnschrift","DIN Alternate","Arial Narrow",sans-serif;
+  --body:"normalidad","Normalidad","Helvetica Neue",Helvetica,Arial,sans-serif;
+
+  --gutter:clamp(20px,5vw,64px);
+  --measure:1120px;
+  --narrow:700px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:74px}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none !important; transition:none !important}
+}
+body{
+  margin:0; background:var(--ballet); color:var(--rootbeer);
+  font-family:var(--body); font-size:16px; line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--copper); outline-offset:3px}
+
+/* ---------- type ---------- */
+.eyebrow{
+  font-family:var(--display); text-transform:uppercase; font-size:11px;
+  letter-spacing:.34em; color:var(--burgundy); margin:0 0 13px;
+}
+.eyebrow.on-dark{color:var(--copper)}
+h2.sec-title{
+  font-family:var(--display); text-transform:uppercase; font-weight:400;
+  letter-spacing:.14em; font-size:clamp(22px,3.1vw,34px); line-height:1.16;
+  margin:0 0 16px;
+}
+h3{margin:0}
+p{margin:0 0 18px}
+p:last-child{margin-bottom:0}
+.lede{font-size:clamp(16px,1.45vw,18.5px); line-height:1.72}
+.small{font-size:13.5px; line-height:1.6}
+.dim{opacity:.68}
+
+/* ---------- layout ---------- */
+.wrap{max-width:var(--measure); margin:0 auto; padding:0 var(--gutter)}
+.wrap-narrow{max-width:var(--narrow); margin:0 auto; padding:0 var(--gutter)}
+section{padding:clamp(44px,5.8vw,76px) 0}
+.band-dark{background:var(--rootbeer); color:var(--ballet)}
+.band-dark .sec-title{color:var(--ballet)}
+
+/* curved section edges — the dark blocks are scooped, not squared */
+.curve-out{position:relative; padding-bottom:clamp(78px,9vw,124px)}
+section.hero.curve-out{padding-bottom:clamp(84px,9.5vw,132px)}
+.curve-out > .curve{
+  position:absolute; left:0; right:0; bottom:-1px;
+  width:100%; height:clamp(42px,5.8vw,94px);
+  display:block; pointer-events:none; z-index:2;
+}
+.center{text-align:center}
+.split{display:grid; grid-template-columns:1fr 1fr; gap:clamp(24px,3.6vw,48px); align-items:start}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-block; font-family:var(--display); text-transform:uppercase;
+  font-size:10.5px; letter-spacing:.24em; text-decoration:none;
+  padding:13px 24px; border:1px solid var(--rootbeer); background:transparent;
+  color:inherit; cursor:pointer; transition:background .18s ease,color .18s ease;
+}
+.btn:hover,.btn:focus-visible{background:var(--rootbeer); color:var(--ballet)}
+.btn-fill{background:var(--burgundy); border-color:var(--burgundy); color:var(--ballet)}
+.btn-fill:hover,.btn-fill:focus-visible{background:var(--rootbeer); border-color:var(--rootbeer)}
+.btn-light{border-color:var(--ballet); color:var(--ballet)}
+.btn-light:hover,.btn-light:focus-visible{background:var(--ballet); color:var(--rootbeer)}
+
+/* ---------- nav ---------- */
+header.nav{
+  position:sticky; top:0; z-index:50;
+  background:rgba(237,231,218,.94);
+  backdrop-filter:saturate(140%) blur(10px);
+  border-bottom:1px solid var(--rule);
+}
+.nav-in{
+  max-width:var(--measure); margin:0 auto; padding:0 var(--gutter);
+  height:73px; display:flex; align-items:center; justify-content:space-between; gap:24px;
+}
+.mark{
+  font-family:var(--display); font-size:23px; letter-spacing:.06em;
+  text-decoration:none; line-height:1; display:inline-flex; align-items:baseline; gap:.5ch;
+}
+.mark small{
+  font-size:8.5px; letter-spacing:.36em; text-transform:uppercase;
+  opacity:.6; transform:translateY(-1px);
+}
+.nav-links{display:flex; align-items:center; gap:28px}
+.nav-links a{
+  font-family:var(--display); text-transform:uppercase; font-size:10.5px;
+  letter-spacing:.24em; text-decoration:none; padding:6px 0;
+  border-bottom:1px solid transparent;
+}
+.nav-links a:hover,.nav-links a:focus-visible{border-bottom-color:var(--burgundy)}
+.nav-toggle{display:none; background:none; border:0; padding:8px; cursor:pointer; color:inherit}
+.nav-toggle span{display:block; width:22px; height:1px; background:currentColor; margin:5px 0}
+
+/* ---------- hero ---------- */
+.hero{
+  background:var(--rootbeer); color:var(--ballet);
+  padding:clamp(60px,9.5vw,116px) 0 clamp(44px,5.6vw,70px);
+}
+.hero-mark{
+  font-family:var(--display); text-transform:lowercase;
+  font-size:clamp(78px,19vw,215px); line-height:.84; letter-spacing:-.005em;
+  margin:0 0 10px;
+}
+.hero-sub{
+  font-family:var(--display); text-transform:uppercase;
+  font-size:clamp(10px,1.35vw,13px); letter-spacing:.42em;
+  color:var(--wistful); margin:0 0 clamp(24px,3.2vw,38px);
+}
+.hero-line{
+  font-family:var(--display); text-transform:uppercase; font-weight:400;
+  font-size:clamp(17px,2.5vw,30px); letter-spacing:.1em; line-height:1.34;
+  max-width:19ch; margin:0 0 28px;
+}
+.hero-body{max-width:44ch; margin:0 0 38px; opacity:.86}
+.hero-cta{display:flex; flex-wrap:wrap; gap:14px; align-items:center}
+.hero-meta{
+  margin-top:clamp(30px,4.2vw,50px); padding-top:18px;
+  border-top:1px solid var(--rule-light);
+  display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
+}
+.hero-meta div span{
+  display:block; font-family:var(--display); text-transform:uppercase;
+  font-size:9.5px; letter-spacing:.26em; color:var(--copper); margin-bottom:8px;
+}
+.hero-meta div strong{font-weight:400; font-size:14.5px; letter-spacing:.02em}
+
+/* ============================================================
+   GRAPHIC ELEMENTS
+   Four-point star lattice, star accents, circle badges, url tag.
+   Dial the pattern up or down with --star-op below. 0 turns it off.
+   ============================================================ */
+:root{
+  --star-op:.04;          /* lattice opacity on dark bands */
+  --star-op-light:.05;     /* lattice opacity on ballet white */
+}
+
+/* --- lattice texture --- */
+.lattice{position:relative; isolation:isolate}
+.lattice::before{
+  content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+  opacity:var(--star-op);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='%238D1914'%3E%3Crect x='94' y='0' width='12' height='200'/%3E%3Crect x='0' y='94' width='200' height='12'/%3E%3Cpath d='M100,34 Q104,96 166,100 Q104,104 100,166 Q96,104 34,100 Q96,96 100,34 Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:clamp(150px,15vw,230px);
+  background-position:center top;
+}
+.lattice > *{position:relative; z-index:1}
+.lattice-light::before{
+  opacity:var(--star-op-light);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='%23260D08'%3E%3Crect x='94' y='0' width='12' height='200'/%3E%3Crect x='0' y='94' width='200' height='12'/%3E%3Cpath d='M100,34 Q104,96 166,100 Q104,104 100,166 Q96,104 34,100 Q96,96 100,34 Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+/* fade the lattice out rather than cutting it hard at the section edge */
+.lattice-fade::before{
+  -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 46%,transparent 92%);
+  mask-image:linear-gradient(to bottom,#000 0%,#000 46%,transparent 92%);
+}
+
+/* --- star glyph, used as a mark beside labels --- */
+.star{
+  display:inline-block; width:.72em; height:.72em; vertical-align:baseline;
+  margin-right:.85em; flex:none;
+}
+.star svg{display:block; width:100%; height:100%; fill:currentColor}
+.eyebrow{display:flex; align-items:center}
+.eyebrow.center-mark{justify-content:center}
+
+/* --- circle badge --- */
+.badge{
+  width:44px; height:44px; border:1px solid currentColor; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  opacity:.55; margin-bottom:20px;
+}
+.badge svg{width:19px; height:19px; fill:none; stroke:currentColor; stroke-width:1.2}
+
+/* --- url tag with ramp --- */
+.urltag{
+  display:inline-flex; align-items:stretch; gap:0;
+  border:1px solid var(--rule-light); height:34px; max-width:280px; width:100%;
+}
+.urltag b{
+  font-family:var(--display); text-transform:lowercase; font-weight:400;
+  font-size:11px; letter-spacing:.12em; padding:0 14px;
+  display:flex; align-items:center; white-space:nowrap; opacity:.8;
+}
+.urltag .ramp{
+  flex:1; display:flex; align-items:flex-end; gap:2px;
+  padding:6px 8px 6px 0; overflow:hidden;
+}
+.urltag .ramp i{flex:1; background:var(--wistful); opacity:.55}
+
+/* ---------- renders, integrated inline ---------- */
+/*  Swap any <em> placeholder for an image:
+      <img src="renders/reception.jpg" alt="Reception, ōra studios">
+    .shot crops for you, so aspect ratio doesn't matter.            */
+.shot{
+  background:rgba(38,13,8,.05); border:1px solid var(--rule);
+  display:flex; align-items:flex-end; padding:16px; overflow:hidden;
+}
+.band-dark .shot{background:rgba(237,231,218,.05); border-color:var(--rule-light)}
+.shot img{width:100%; height:100%; object-fit:cover}
+.shot em{
+  font-style:normal; font-family:var(--display); text-transform:uppercase;
+  font-size:9px; letter-spacing:.24em; opacity:.45;
+}
+.shot-wide{aspect-ratio:16/6; margin-top:clamp(24px,3.2vw,40px)}
+.shot-room{aspect-ratio:4/3; margin-bottom:18px}
+.shot-tall{aspect-ratio:3/4}
+.render-note{font-size:12px; opacity:.42; margin-top:12px; font-style:italic}
+
+/* ---------- map ---------- */
+.map{
+  border:1px solid var(--rule-light); margin-top:6px;
+  aspect-ratio:16/10; width:100%; overflow:hidden;
+}
+.map iframe{
+  display:block; width:100%; height:100%; border:0;
+  filter:grayscale(.55) sepia(.22) contrast(.94) brightness(.96);
+}
+
+/* ---------- rooms ---------- */
+.room{border-top:1px solid var(--rule); padding-top:26px}
+.room .num{
+  font-family:var(--display); font-size:10px; letter-spacing:.28em;
+  color:var(--burgundy); text-transform:uppercase; margin-bottom:16px; display:block;
+}
+.room h3{
+  font-family:var(--display); text-transform:uppercase; font-weight:400;
+  font-size:clamp(18px,2.2vw,24px); letter-spacing:.12em; margin-bottom:16px;
+}
+
+/* ---------- forms ---------- */
+.forms{display:grid; grid-template-columns:1fr 1fr; gap:clamp(24px,3.4vw,46px)}
+.fcard{border-top:1px solid var(--rule); padding-top:24px}
+.fcard h3{
+  font-family:var(--display); text-transform:uppercase; font-weight:400;
+  font-size:clamp(17px,2.1vw,23px); letter-spacing:.12em; margin-bottom:12px;
+}
+.fcard > p{font-size:14.5px; opacity:.74; margin-bottom:28px; max-width:38ch}
+.tagline{
+  font-family:var(--display); text-transform:uppercase; font-size:9.5px;
+  letter-spacing:.26em; color:var(--burgundy); margin:0 0 14px;
+}
+form .f{margin-bottom:18px}
+form label{
+  display:block; font-family:var(--display); text-transform:uppercase;
+  font-size:9.5px; letter-spacing:.24em; margin-bottom:9px; opacity:.72;
+}
+form input,form textarea,form select{
+  width:100%; background:transparent; border:0; border-bottom:1px solid var(--rule);
+  color:inherit; font-family:var(--body); font-size:15px; padding:9px 0;
+}
+form input:focus,form textarea:focus,form select:focus{
+  outline:none; border-bottom-color:var(--copper);
+}
+form textarea{resize:vertical; min-height:76px}
+.formnote{font-size:12px; opacity:.58; margin-top:16px}
+
+/* ---------- visit ---------- */
+.cblock{border-top:1px solid var(--rule-light); padding-top:17px; margin-bottom:24px}
+.cblock span{
+  display:block; font-family:var(--display); text-transform:uppercase;
+  font-size:9.5px; letter-spacing:.26em; color:var(--copper); margin-bottom:10px;
+}
+.cblock p,.cblock a{font-size:14.5px; margin:0; text-decoration:none}
+.cblock a:hover{color:var(--wistful)}
+.hours-row{
+  display:flex; justify-content:space-between; gap:20px;
+  padding:11px 0; border-bottom:1px solid var(--rule-light); font-size:14px;
+}
+
+/* ---------- faq ---------- */
+.faq-cols{display:grid; grid-template-columns:1fr 1fr; gap:0 clamp(28px,4vw,56px); margin-top:26px}
+details.q{border-bottom:1px solid var(--rule)}
+details.q summary{
+  list-style:none; cursor:pointer; padding:19px 30px 19px 0; position:relative;
+  font-family:var(--display); text-transform:uppercase; font-size:12px;
+  letter-spacing:.12em; line-height:1.5;
+}
+details.q summary::-webkit-details-marker{display:none}
+details.q summary::after{
+  content:"+"; position:absolute; right:2px; top:18px;
+  font-family:var(--display); font-size:15px; color:var(--burgundy);
+}
+details.q[open] summary::after{content:"–"}
+details.q .a{padding:0 30px 22px 0; font-size:14px; opacity:.82}
+
+/* ---------- footer ---------- */
+footer{background:var(--rootbeer); color:var(--ballet); padding:44px 0 32px}
+.fgrid{display:flex; justify-content:space-between; gap:40px; flex-wrap:wrap; align-items:flex-start}
+.flinks{display:grid; grid-template-columns:repeat(2,minmax(110px,auto)); gap:9px 40px}
+.flinks a{
+  font-family:var(--display); text-transform:uppercase; font-size:10px;
+  letter-spacing:.2em; text-decoration:none; opacity:.72;
+}
+.flinks a:hover{opacity:1; color:var(--wistful)}
+.fbot{
+  margin-top:42px; padding-top:22px; border-top:1px solid var(--rule-light);
+  display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;
+  font-size:11.5px; opacity:.5;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .nav-links{
+    display:none; position:absolute; top:73px; left:0; right:0;
+    background:var(--ballet); border-bottom:1px solid var(--rule);
+    flex-direction:column; align-items:flex-start; gap:0; padding:8px var(--gutter) 20px;
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{padding:13px 0; width:100%; border-bottom:1px solid var(--rule)}
+  .nav-toggle{display:block}
+  .nav .btn{display:none}
+
+  .split,.forms,.faq-cols{grid-template-columns:1fr}
+  .faq-cols{gap:0}
+  .hero-meta{grid-template-columns:1fr; gap:20px}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="mark" href="#top">ōra <small>studios</small></a>
+    <nav class="nav-links" id="menu">
+      <a href="#coming">What's coming</a>
+      <a href="#rooms">The rooms</a>
+      <a href="#founding">Founding list</a>
+      <a href="#teach">Teach</a>
+      <a href="#visit">Visit</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-fill" href="#founding">Join the list</a>
+    <button class="nav-toggle" id="toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero lattice lattice-fade curve-out" id="top">
+  <div class="wrap">
+    <h1 class="hero-mark">ōra</h1>
+    <p class="hero-sub">Heated mat &amp; reformer pilates · Port St. Lucie</p>
+
+    <p class="hero-line">An hour that gives more than it takes</p>
+    <p class="hero-body">
+      A heated mat and reformer studio opening in Gatlin Square this fall.
+      Warm oak, soft light, and work that's serious without being punishing.
+    </p>
+
+    <div class="hero-cta">
+      <a class="btn btn-fill" href="#founding">Join the founding list</a>
+      <a class="btn btn-light" href="#rooms">See the rooms</a>
+    </div>
+
+    <div class="hero-meta">
+      <div><span>Opening</span><strong>Fall 2026</strong></div>
+      <div><span>Where</span><strong>Gatlin Square, Port St. Lucie</strong></div>
+      <div><span>Two rooms</span><strong>Heated mat &amp; reformer</strong></div>
+    </div>
+  </div>
+  <svg class="curve" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,120 L0,92 Q720,26 1440,92 L1440,120 Z" fill="#EDE7DA"/>
+  </svg>
+</section>
+
+<!-- ============ WHAT'S COMING ============ -->
+<section id="coming">
+  <div class="wrap-narrow center">
+    <p class="eyebrow center-mark"><span class="star" aria-hidden="true"><svg viewBox="0 0 200 200"><path d="M100,10 Q106,94 190,100 Q106,106 100,190 Q94,106 10,100 Q94,94 100,10 Z"/></svg></span>What's coming</p>
+    <h2 class="sec-title">Two rooms, one standard</h2>
+    <p class="lede">
+      ōra is a heated mat and reformer Pilates studio being built right now at
+      Gatlin Square in Port St. Lucie. Two rooms, so you're never choosing a
+      studio — only choosing a room. Heat when you want to sweat, springs
+      when you want to build.
+    </p>
+    <p class="lede" style="margin-top:18px">
+      We're designing it the way we'd want to walk into it ourselves: warm oak,
+      brass, soft light, and instructors who know your name. Nothing loud.
+      Nothing punishing.
+    </p>
+  </div>
+  <div class="wrap">
+    <div class="shot shot-wide"><em>Reception</em></div>
+    <p class="render-note">Rendering. Final details will differ.</p>
+  </div>
+</section>
+
+<!-- ============ THE ROOMS ============ -->
+<section id="rooms" class="band-dark curve-out">
+  <div class="wrap">
+    <p class="eyebrow on-dark"><span class="star" aria-hidden="true"><svg viewBox="0 0 200 200"><path d="M100,10 Q106,94 190,100 Q106,106 100,190 Q94,106 10,100 Q94,94 100,10 Z"/></svg></span>The rooms</p>
+    <h2 class="sec-title">Heat and springs</h2>
+
+    <div class="split" style="margin-top:26px">
+      <div class="room" style="border-top-color:var(--rule-light)">
+<div class="shot shot-room"><em>Heated room</em></div>
+        <span class="num" style="color:var(--copper)">Room 01</span>
+        <h3>The heated room</h3>
+        <p style="opacity:.82">
+          Mat Pilates under infrared panels. Infrared warms the body directly
+          instead of blasting hot air, so you get depth and mobility without the
+          head-spin of a conventionally heated room — a cleaner sweat and a
+          clearer head.
+        </p>
+        <p style="opacity:.82">
+          Classical and contemporary Pilates, layered with light equipment when
+          the class calls for it. Mats, towels and cold water provided.
+        </p>
+      </div>
+
+      <div class="room" style="border-top-color:var(--rule-light)">
+<div class="shot shot-room"><em>Reformer room</em></div>
+        <span class="num" style="color:var(--copper)">Room 02</span>
+        <h3>The reformer room</h3>
+        <p style="opacity:.82">
+          Nine reformers, unheated, arranged so every client has a sightline to
+          the instructor. Small enough that you're seen and corrected, not lost
+          in a row of twenty.
+        </p>
+        <p style="opacity:.82">
+          Foundations classes for anyone who's never touched a carriage, through
+          to heavier spring work once you've got hours behind you.
+        </p>
+      </div>
+    </div>
+
+    <p class="small" style="opacity:.55; margin-top:30px">
+      Full class schedule announced with our opening instructors.
+    </p>
+  </div>
+  <svg class="curve" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,120 L0,92 Q720,26 1440,92 L1440,120 Z" fill="#EDE7DA"/>
+  </svg>
+</section>
+
+
+<!-- ============ FOUNDING + TEACH ============ -->
+<section id="founding">
+  <div class="wrap">
+    <p class="eyebrow"><span class="star" aria-hidden="true"><svg viewBox="0 0 200 200"><path d="M100,10 Q106,94 190,100 Q106,106 100,190 Q94,106 10,100 Q94,94 100,10 Z"/></svg></span>Get in early</p>
+    <h2 class="sec-title">Two ways to join us</h2>
+
+    <div class="forms" style="margin-top:26px">
+
+      <!-- ---- client list ---- -->
+      <div class="fcard">
+        <p class="tagline">Founding memberships · coming soon</p>
+        <h3>Join the founding list</h3>
+        <p>
+          Founding member pricing, first access to booking, and an invitation to
+          preview classes before we open to the public.
+        </p>
+
+        <form id="clientForm" action="https://app.kit.com/forms/9743286/subscriptions" method="post" novalidate>
+          <div style="position:absolute;left:-9999px;" aria-hidden="true">
+            <label for="c-url">Leave this blank</label>
+            <input id="c-url" name="website_url" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="f">
+            <label for="c-name">Name</label>
+            <input id="c-name" name="fields[first_name]" type="text" autocomplete="name" required>
+          </div>
+          <div class="f">
+            <label for="c-email">Email</label>
+            <input id="c-email" name="email_address" type="email" autocomplete="email" required>
+          </div>
+          <div class="f">
+            <label for="c-room">Which room are you here for</label>
+            <select id="c-room" name="fields[room]">
+              <option>Heated mat</option>
+              <option>Reformer</option>
+              <option>Both</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <button class="btn btn-fill" type="submit">Join the list</button>
+          <p class="formnote" id="clientNote">
+            We'll only email you about opening. Nothing else.
+          </p>
+        </form>
+      </div>
+
+      <!-- ---- instructor list ---- -->
+      <div class="fcard">
+        <p class="tagline">Now hiring · opening team</p>
+        <h3>Teach at ōra</h3>
+        <p>
+          We're building our opening instructor team now — certified teachers who
+          cue form first and want a say in how a studio runs from day one.
+        </p>
+
+        <form id="teachForm" action="https://app.kit.com/forms/9743295/subscriptions" method="post" novalidate>
+          <div style="position:absolute;left:-9999px;" aria-hidden="true">
+            <label for="t-url">Leave this blank</label>
+            <input id="t-url" name="website_url" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="f">
+            <label for="t-name">Name</label>
+            <input id="t-name" name="fields[first_name]" type="text" autocomplete="name" required>
+          </div>
+          <div class="f">
+            <label for="t-email">Email</label>
+            <input id="t-email" name="email_address" type="email" autocomplete="email" required>
+          </div>
+          <div class="f">
+            <label for="t-cert">Certification</label>
+            <input id="t-cert" name="fields[certification]" type="text" placeholder="e.g. comprehensive, mat, reformer">
+          </div>
+          <div class="f">
+            <label for="t-note">What do you teach, and where have you taught</label>
+            <textarea id="t-note" name="fields[experience]"></textarea>
+          </div>
+          <button class="btn" type="submit">Send it over</button>
+          <p class="formnote" id="teachNote">
+            We read every one. Expect to hear back within a week.
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISIT ============ -->
+<section id="visit" class="band-dark curve-out">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <p class="eyebrow on-dark"><span class="star" aria-hidden="true"><svg viewBox="0 0 200 200"><path d="M100,10 Q106,94 190,100 Q106,106 100,190 Q94,106 10,100 Q94,94 100,10 Z"/></svg></span>Visit</p>
+        <h2 class="sec-title">1449 SW Gatlin</h2>
+        <p class="lede" style="opacity:.82; max-width:38ch">
+          We're under construction in Gatlin Square, off Gatlin Boulevard just
+          west of I-95. Free parking directly in front of the unit.
+        </p>
+        <div class="map">
+          <!-- Swap the q= value if the pin lands off. Remove the filter in
+               .map iframe if you'd rather show full-colour Google. -->
+          <iframe
+            title="Map to ōra studios, 1449 SW Gatlin Blvd, Port St. Lucie"
+            src="https://www.google.com/maps?q=1449+SW+Gatlin+Blvd+Unit+12,+Port+St.+Lucie,+FL+34953&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+      <div>
+        <div class="cblock">
+          <span>Address</span>
+          <p>ōra studios<br>1449 SW Gatlin Blvd, Unit 12<br>Gatlin Square<br>Port St. Lucie, FL 34953</p>        </div>
+        <div class="cblock">
+          <span>Email</span>
+          <p><a href="mailto:info@orastudios.co">info@orastudios.co</a></p>
+        </div>
+        <div class="cblock">
+          <span>Follow</span>
+          <p><a href="https://www.instagram.com/orapilatesstudios/" target="_blank" rel="noopener">@orapilatesstudios</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <svg class="curve" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,120 L0,92 Q720,26 1440,92 L1440,120 Z" fill="#EDE7DA"/>
+  </svg>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap">
+    <p class="eyebrow"><span class="star" aria-hidden="true"><svg viewBox="0 0 200 200"><path d="M100,10 Q106,94 190,100 Q106,106 100,190 Q94,106 10,100 Q94,94 100,10 Z"/></svg></span>Frequently asked</p>
+    <h2 class="sec-title">Questions, answered</h2>
+
+    <div class="faq-cols">
+      <div>
+        <details class="q">
+          <summary>What is heated mat Pilates?</summary>
+          <div class="a">A mat-based Pilates class in a room warmed by radiant infrared panels. Infrared heats your body directly rather than heating the air around you, so you get deeper mobility, a cleaner sweat and far less lightheadedness than a conventionally heated room. The work itself is classical and contemporary Pilates, layered with light equipment when the class calls for it.</div>
+        </details>
+        <details class="q">
+          <summary>Where is ōra studios located?</summary>
+          <div class="a">1449 SW Gatlin Blvd, Unit 12, in Gatlin Square, Port St. Lucie, FL 34953 — just west of I-95 at the Gatlin Boulevard exit, with free parking directly in front of the unit.</div>
+        </details>
+        <details class="q">
+          <summary>When do you open?</summary>
+          <div class="a">Fall 2026. We're in buildout now. Join the founding list and you'll get the opening date, and access to book, before it's public.</div>
+        </details>
+      </div>
+
+      <div>
+        <details class="q">
+          <summary>Do you serve Tradition, St. Lucie West and Stuart?</summary>
+          <div class="a">Yes. Gatlin Square sits right off I-95, roughly ten minutes from Tradition and St. Lucie West and about twenty-five from Jensen Beach and Stuart.</div>
+        </details>
+        <details class="q">
+          <summary>I've never done Pilates. Can I start here?</summary>
+          <div class="a">Yes. Both rooms will have foundations classes built for people on day one — slower pacing, more cueing, and instructors who come to you rather than calling corrections across the room. No experience with Pilates or with heat assumed.</div>
+        </details>
+        <details class="q">
+          <summary>What will classes cost?</summary>
+          <div class="a">Memberships, class packs and single classes, with founding member pricing for anyone on the list before we open. Full pricing is announced closer to opening.</div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="mark" href="#top" style="color:var(--ballet)">ōra <small>studios</small></a>
+        <p class="small" style="opacity:.6; margin-top:16px; max-width:26ch">
+          Heated mat &amp; reformer Pilates<br>
+          Gatlin Square, Port St. Lucie, Florida<br>
+          Opening fall 2026
+        </p>
+        <div class="urltag" style="margin-top:22px">
+          <b>www.orastudios.co</b>
+          <span class="ramp" aria-hidden="true">
+            <i style="height:14%"></i><i style="height:20%"></i><i style="height:26%"></i>
+            <i style="height:32%"></i><i style="height:38%"></i><i style="height:44%"></i>
+            <i style="height:52%"></i><i style="height:60%"></i><i style="height:68%"></i>
+            <i style="height:76%"></i><i style="height:84%"></i><i style="height:92%"></i>
+          </span>
+        </div>
+      </div>
+      <div class="flinks">
+        <a href="#coming">What's coming</a>
+        <a href="#rooms">The rooms</a>
+          <a href="#founding">Founding list</a>
+        <a href="#teach">Teach at ōra</a>
+        <a href="#visit">Visit</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 ōra studios. All rights reserved.</span>
+      <span>orastudios.co</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Local business structured data — helps Google understand the listing -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HealthAndBeautyBusiness",
+  "name":"ōra studios",
+  "description":"Heated mat and reformer Pilates studio opening fall 2026 in Port St. Lucie, Florida.",
+  "url":"https://orastudios.co",
+  "email":"info@orastudios.co",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"1449 SW Gatlin Blvd, Unit 12",
+    "addressLocality":"Port St. Lucie",
+    "addressRegion":"FL",
+    "postalCode":"34953",
+    "addressCountry":"US"
+  },
+  "areaServed":["Port St. Lucie","Tradition","St. Lucie West","Jensen Beach","Stuart"]
+}
+</script>
+
+<script>
+// mobile menu
+var t=document.getElementById('toggle'),m=document.getElementById('menu');
+t.addEventListener('click',function(){
+  var open=m.classList.toggle('open');
+  t.setAttribute('aria-expanded',open?'true':'false');
+});
+m.addEventListener('click',function(e){
+  if(e.target.tagName==='A'){m.classList.remove('open');t.setAttribute('aria-expanded','false');}
+});
+
+/* --------------------------------------------------------------
+   FORM HANDLING
+   Both forms POST to Kit. Submissions arrive as subscribers in
+   the matching Kit form, with the extra answers saved as custom
+   fields. The page never navigates away.
+   -------------------------------------------------------------- */
+function wire(formId,noteId,successMsg){
+  var f=document.getElementById(formId), note=document.getElementById(noteId);
+  var btn=f.querySelector('button');
+  var defaultNote=note.textContent;
+
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+
+    // honeypot — bots fill hidden fields, people don't
+    var trap=f.querySelector('input[name="website_url"]');
+    if(trap && trap.value){ return; }
+
+    var email=f.querySelector('input[type=email]');
+    if(!email.value || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.value)){
+      note.textContent='Enter an email we can reach you at.';
+      email.focus(); return;
+    }
+
+    btn.disabled=true;
+    note.textContent='Sending…';
+
+    fetch(f.action,{
+      method:'POST',
+      body:new FormData(f),
+      headers:{'Accept':'application/json'}
+    }).then(function(r){
+      if(!r.ok) throw new Error('bad response');
+      note.textContent=successMsg;
+      f.reset();
+    }).catch(function(){
+      // if the request is blocked, fall back to a normal submit
+      note.textContent=defaultNote;
+      btn.disabled=false;
+      f.removeEventListener('submit',arguments.callee);
+      f.submit();
+    });
+  });
+}
+wire('clientForm','clientNote',"You're on the list. We'll email you before booking opens.");
+wire('teachForm','teachNote',"Got it. We'll be in touch within a week.");
+</script>
+</body>
+</html>
