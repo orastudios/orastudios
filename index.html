@@ -87,7 +87,7 @@ section.hero.curve-out{padding-bottom:clamp(84px,9.5vw,132px)}
 /* ---------- buttons ---------- */
 .btn{
   display:inline-block; font-family:var(--display); text-transform:uppercase;
-  font-size:10.5px; letter-spacing:.24em; text-decoration:none;
+  font-size:10.5px; letter-spacing:.2em; text-decoration:none;
   padding:13px 24px; border:1px solid var(--rootbeer); background:transparent;
   color:inherit; cursor:pointer; transition:background .18s ease,color .18s ease;
 }
@@ -118,7 +118,8 @@ header.nav{
 }
 .nav-in{
   max-width:var(--measure); margin:0 auto; padding:0 var(--gutter);
-  height:73px; display:flex; align-items:center; justify-content:space-between; gap:24px;
+  height:73px; display:flex; align-items:center; justify-content:space-between;
+  gap:20px; flex-wrap:nowrap; white-space:nowrap;
 }
 .mark{
   font-family:var(--display); font-size:23px; letter-spacing:.06em;
@@ -128,13 +129,15 @@ header.nav{
   font-size:8.5px; letter-spacing:.36em; text-transform:uppercase;
   opacity:.6; transform:translateY(-1px);
 }
-.nav-links{display:flex; align-items:center; gap:28px}
+.nav-links{display:flex; align-items:center; gap:clamp(14px,1.7vw,26px); flex-wrap:nowrap}
 .nav-links a{
-  font-family:var(--display); text-transform:uppercase; font-size:10.5px;
-  letter-spacing:.24em; text-decoration:none; padding:6px 0;
+  font-family:var(--display); text-transform:uppercase;
+  font-size:clamp(8.5px,.72vw,10px); letter-spacing:.14em;
+  text-decoration:none; padding:6px 0; white-space:nowrap;
   border-bottom:1px solid transparent;
 }
 .nav-links a:hover,.nav-links a:focus-visible{border-bottom-color:var(--burgundy)}
+.nav-in > .btn{font-size:9.5px; letter-spacing:.16em; padding:11px 18px; white-space:nowrap}
 .nav-toggle{display:none; background:none; border:0; padding:8px; cursor:pointer; color:inherit}
 .nav-toggle span{display:block; width:22px; height:1px; background:currentColor; margin:5px 0}
 
@@ -346,7 +349,7 @@ footer{background:var(--rootbeer); color:var(--ballet); padding:44px 0 32px}
 }
 
 /* ---------- responsive ---------- */
-@media (max-width:900px){
+@media (max-width:1080px){
   .nav-links{
     display:none; position:absolute; top:73px; left:0; right:0;
     background:var(--ballet); border-bottom:1px solid var(--rule);
