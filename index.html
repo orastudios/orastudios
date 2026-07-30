@@ -243,8 +243,9 @@ header.nav{
     .shot crops for you, so aspect ratio doesn't matter.            */
 .shot{
   background:rgba(38,13,8,.05); border:1px solid var(--rule);
-  display:flex; align-items:flex-end; padding:16px; overflow:hidden;
+  display:flex; align-items:flex-end; overflow:hidden;
 }
+.shot:has(em){padding:16px}
 .band-dark .shot{background:rgba(237,231,218,.05); border-color:var(--rule-light)}
 .shot img{width:100%; height:100%; object-fit:cover}
 .shot em{
@@ -402,21 +403,21 @@ footer{background:var(--rootbeer); color:var(--ballet); padding:44px 0 32px}
     <h1 class="hero-mark"><svg class="logo-hero" role="img" aria-label="ōra"><use href="#ora-mark"/></svg></h1>
     <p class="hero-sub">Heated mat &amp; reformer pilates · Port St. Lucie</p>
 
-    <p class="hero-line">An hour that gives more than it takes</p>
+    <p class="hero-line">Your best hour starts here.</p>
     <p class="hero-body">
-      A heated mat and reformer studio opening in Gatlin Square this fall.
-      Warm oak, soft light, and work that's serious without being punishing.
+      Thoughtfully designed. Beautifully challenging. Built to become the hour
+      you'll look forward to most.
     </p>
 
     <div class="hero-cta">
-      <a class="btn btn-fill" href="#founding">Join the founding list</a>
-      <a class="btn btn-light" href="#rooms">See the rooms</a>
+      <a class="btn btn-fill" href="#founding">Join waitlist</a>
+      <a class="btn btn-light" href="#rooms">Explore the studio</a>
     </div>
 
     <div class="hero-meta">
       <div><span>Opening</span><strong>Fall 2026</strong></div>
-      <div><span>Where</span><strong>Gatlin Square, Port St. Lucie</strong></div>
-      <div><span>Two rooms</span><strong>Heated mat &amp; reformer</strong></div>
+      <div><span>Location</span><strong>Gatlin Square<br>Port St. Lucie</strong></div>
+      <div><span>Experience</span><strong>Heated mat<br>Reformer</strong></div>
     </div>
   </div>
   <svg class="curve" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
@@ -428,21 +429,22 @@ footer{background:var(--rootbeer); color:var(--ballet); padding:44px 0 32px}
 <section id="coming">
   <div class="wrap-narrow center">
     <p class="eyebrow center-mark"><span class="star" aria-hidden="true"><svg viewBox="0 0 200 200"><path d="M100,10 Q106,94 190,100 Q106,106 100,190 Q94,106 10,100 Q94,94 100,10 Z"/></svg></span>What's coming</p>
-    <h2 class="sec-title">Two rooms, one standard</h2>
+    <h2 class="sec-title">Two rooms. One standard.</h2>
     <p class="lede">
-      ōra is a heated mat and reformer Pilates studio being built right now at
-      Gatlin Square in Port St. Lucie. Two rooms, so you're never choosing a
-      studio — only choosing a room. Heat when you want to sweat, springs
-      when you want to build.
+      Ōra was built around a simple idea: your workout should fit your day.
     </p>
     <p class="lede" style="margin-top:18px">
-      We're designing it the way we'd want to walk into it ourselves: warm oak,
-      brass, soft light, and instructors who know your name. Nothing loud.
-      Nothing punishing.
+      Some days you'll want the energy of a heated mat class. Other days, you'll
+      want the precision of the reformer. With two rooms under one roof, you
+      don't have to choose between studios — just how you want to move.
+    </p>
+    <p class="lede" style="margin-top:18px">
+      Whichever room you walk into, you can expect the same thoughtful
+      instruction, warm welcome, and attention to every detail.
     </p>
   </div>
   <div class="wrap">
-    <div class="shot shot-wide"><em>Reception</em></div>
+    <div class="shot shot-wide"><img src="images/reception.jpg" alt="Reception at ora studios, fluted oak desk beneath a backlit wordmark" loading="lazy" width="1600" height="1073"></div>
     <p class="render-note">Rendering. Final details will differ.</p>
   </div>
 </section>
@@ -455,33 +457,39 @@ footer{background:var(--rootbeer); color:var(--ballet); padding:44px 0 32px}
 
     <div class="split" style="margin-top:26px">
       <div class="room" style="border-top-color:var(--rule-light)">
-<div class="shot shot-room"><em>Heated room</em></div>
+<div class="shot shot-room"><img src="images/heated-room.jpg" alt="The heated mat room at ora studios, mats laid out beneath infrared panels" loading="lazy" width="1600" height="1067"></div>
         <span class="num" style="color:var(--copper)">Room 01</span>
         <h3>The heated room</h3>
         <p style="opacity:.82">
-          Mat Pilates under infrared panels. Infrared warms the body directly
-          instead of blasting hot air, so you get depth and mobility without the
-          head-spin of a conventionally heated room — a cleaner sweat and a
-          clearer head.
+          Built for movement that leaves you feeling lighter than when you
+          walked in.
         </p>
         <p style="opacity:.82">
-          Classical and contemporary Pilates, layered with light equipment when
-          the class calls for it. Mats, towels and cold water provided.
+          Our heated mat room uses infrared panels instead of forced hot air,
+          warming your body more evenly for a comfortable, deep sweat. Expect a
+          mix of classical and contemporary Pilates with props when the class
+          calls for them.
+        </p>
+        <p style="opacity:.82">
+          Mats, towels, and cold water are always waiting for you.
         </p>
       </div>
 
       <div class="room" style="border-top-color:var(--rule-light)">
-<div class="shot shot-room"><em>Reformer room</em></div>
+<div class="shot shot-room"><img src="images/reformer-room.jpg" alt="The reformer room at ora studios, nine reformers beside arched lit mirrors" loading="lazy" width="1600" height="1067"></div>
         <span class="num" style="color:var(--copper)">Room 02</span>
         <h3>The reformer room</h3>
         <p style="opacity:.82">
-          Nine reformers, unheated, arranged so every client has a sightline to
-          the instructor. Small enough that you're seen and corrected, not lost
-          in a row of twenty.
+          Precision. Strength. Control.
         </p>
         <p style="opacity:.82">
-          Foundations classes for anyone who's never touched a carriage, through
-          to heavier spring work once you've got hours behind you.
+          Nine reformers. Small classes. Instructors who actually know your name
+          and have time to coach you.
+        </p>
+        <p style="opacity:.82">
+          Whether it's your very first class or you've spent years on the
+          carriage, you'll find classes that meet you where you are and keep you
+          coming back.
         </p>
       </div>
     </div>
@@ -637,34 +645,37 @@ footer{background:var(--rootbeer); color:var(--ballet); padding:44px 0 32px}
       <div>
         <details class="q">
           <summary>What is heated mat Pilates?</summary>
-          <div class="a">A mat-based Pilates class in a room warmed by radiant infrared panels. Infrared heats your body directly rather than heating the air around you, so you get deeper mobility, a cleaner sweat and far less lightheadedness than a conventionally heated room. The work itself is classical and contemporary Pilates, layered with light equipment when the class calls for it.</div>
+          <div class="a">Heated mat Pilates combines classical and contemporary Pilates in a room warmed by infrared panels. Instead of heating the air, infrared warms your body directly for a comfortable, deep sweat and greater mobility.</div>
         </details>
         <details class="q">
-          <summary>Where is ora studios located?</summary>
-          <div class="a">1449 SW Gatlin Blvd, Unit 12, in Gatlin Square, Port St. Lucie, FL 34953 — just west of I-95 at the Gatlin Boulevard exit, with free parking directly in front of the unit.</div>
+          <summary>Where is ora located?</summary>
+          <div class="a">1449 SW Gatlin Blvd, Unit 12, Gatlin Square, Port St. Lucie, FL 34953. Just off I-95 with free parking right outside the studio.</div>
         </details>
         <details class="q">
           <summary>When do you open?</summary>
-          <div class="a">Fall 2026. We're in buildout now. Join the founding list and you'll get the opening date, and access to book, before it's public.</div>
+          <div class="a">We're opening Fall 2026. Join the Founding List to be the first to hear about memberships, pricing, class schedules, and opening day.</div>
+        </details>
+        <details class="q">
+          <summary>Do you serve Tradition, St. Lucie West &amp; Stuart?</summary>
+          <div class="a">Yes. We're just off I-95 in Gatlin Square — about 10 minutes from Tradition and St. Lucie West, and around 25 minutes from Stuart.</div>
         </details>
       </div>
 
       <div>
         <details class="q">
-          <summary>Do you serve Tradition, St. Lucie West and Stuart?</summary>
-          <div class="a">Yes. Gatlin Square sits right off I-95, roughly ten minutes from Tradition and St. Lucie West and about twenty-five from Jensen Beach and Stuart.</div>
-        </details>
-        <details class="q">
           <summary>I've never done Pilates. Can I start here?</summary>
-          <div class="a">Yes. Both rooms will have foundations classes built for people on day one — slower pacing, more cueing, and instructors who come to you rather than calling corrections across the room. No experience with Pilates or with heat assumed.</div>
+          <div class="a">Absolutely. Whether it's your first class or you've been doing Pilates for years, our instructors are there to help you move with confidence and get the most out of every class.</div>
         </details>
         <details class="q">
-          <summary>What will classes cost?</summary>
-          <div class="a">Memberships, class packs and single classes, with founding member pricing for anyone on the list before we open. Full pricing is announced closer to opening.</div>
+          <summary>How do memberships work?</summary>
+          <div class="a">We'll offer memberships and single drop-in classes. Founding Members will receive our best pricing before we open, with full details announced closer to launch.</div>
+        </details>
+        <details class="q">
+          <summary>What should I bring?</summary>
+          <div class="a">Grip socks are required for reformer classes. For heated mat classes, please bring your own mat. Bring a water bottle, and we'll have a chilled towel waiting for you after class. If you forget anything, we'll have studio essentials available for purchase in our retail shop.</div>
         </details>
       </div>
     </div>
-  </div>
 </section>
 
 <footer>
