@@ -44,9 +44,8 @@
   --rule:rgba(38,13,8,.22);
   --rule-light:rgba(237,231,218,.24);
 
-  --display:"eurostile-extended","Eurostile Extended","Eurostile Extd",
-            "Bahnschrift","DIN Alternate","Arial Narrow",sans-serif;
-  --body:"normalidad-text","Normalidad","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --display:"eurostile-extended",sans-serif;
+  --body:"normalidad-text",sans-serif;
 
   --gutter:clamp(20px,5vw,64px);
   --measure:1120px;
@@ -65,6 +64,28 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 img{max-width:100%;display:block}
+
+/* nothing on this site renders in a system font */
+button, input, select, optgroup, option, textarea,
+h1,h2,h3,h4,h5,h6, p, a, li, td, th, label, summary, span, div, strong, b, em, i, small {
+  font-family:inherit;
+}
+body, body * {font-family:var(--body)}
+.display, .eyebrow, .sec-title, h2.sec-title, .mark, .mark small,
+.nav-links a, .btn, .hero-mark, .hero-sub, .hero-line,
+.hero-meta div span, .hero-meta div strong,
+.room .num, .room h3, .fcard h3, .tagline,
+.cblock span, .page-nav a, .shot em, .render-note,
+details.q summary, form label, .flinks a, .urltag b,
+.star, .logo, .logo-hero {
+  font-family:var(--display);
+}
+/* body copy stays in the text face even inside display-font containers */
+details.q .a, .lede, .small, p, .hours-row, form input,
+form textarea, form select, .fbot span {
+  font-family:var(--body);
+}
+
 a{color:inherit}
 :focus-visible{outline:2px solid var(--copper); outline-offset:3px}
 
